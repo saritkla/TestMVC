@@ -1,0 +1,99 @@
+{
+  "LECTURER": [
+    {
+      "TID": "0001",
+      "Firstname": "Karla",
+      "Lastname": "Brook"
+    },
+    {
+      "TID": "0002",
+      "Firstname": "Parris",
+      "Lastname": "Peacock"
+    },
+    {
+      "TID": "0003",
+      "Firstname": "Nicky",
+      "Lastname": "Ferrell"
+    },
+    {
+      "TID": "0004",
+      "Firstname": "Ronnie",
+      "Lastname": "Prince"
+    }
+  ],
+  "PLATFORMS": [
+    {
+      "PID": "0001",
+      "Platform_name": "Google Classroom",
+      "score": 8.0
+    },
+    {
+      "PID": "0002",
+      "Platform_name": "YouTube",
+      "score": 6.5
+    },
+    {
+      "PID": "0003",
+      "Platform_name": "Facebook",
+      "score": 4.0
+    },
+    {
+      "PID": "0004",
+      "Platform_name": "Microsoft Teams",
+      "score": 7.0
+    },
+    {
+      "PID": "0005",
+      "Platform_name": "Google Hangouts",
+      "score": 7.5
+    },
+    {
+      "PID": "0006",
+      "Platform_name": "Zoom",
+      "score": 7.5
+    },
+    {
+      "PID": "0007",
+      "Platform_name": "PEARLS",
+      "score": 8.5
+    },
+  ],
+  "SUBJECTS": [
+    {
+      "SID": "0001",
+      "Subject_name": "Fundamental Programming",
+      "TID": "0001",
+      "PID": "0004"
+    },
+    {
+      "SID": "0002",
+      "Subject_name": "MVC Programming",
+      "TID": "0002",
+      "PID": "0001"
+    },
+    {
+      "SID": "0003",
+      "Subject_name": "Computer Science",
+      "TID": "0002",
+      "PID": "0001"
+    },
+    {
+      "SID": "0004",
+      "Subject_name": "Software Engineering",
+      "TID": "0003",
+      "PID": "0007"
+    },
+    {
+      "SID": "0005",
+      "Subject_name": "Data Structures",
+      "TID": "0003",
+      "PID": "0007"
+    },
+    {
+      "SID": "0006",
+      "Subject_name": "Calculus",
+      "TID": "0004",
+      "PID": "0003"
+    }
+  ]
+}
