@@ -10,7 +10,6 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.Arrays;
 
 
 public class Model {
@@ -97,23 +96,30 @@ public class Model {
         readJSONFromfileLocal();
         JSONArray Nsort = new JSONArray();
         StringBuilder stringBuilder = new StringBuilder();
+        String bb;
         JSONObject subNsc = new JSONObject();
         for (int i = 0; i < subjects.length(); ++i) {
             JSONObject sub = subjects.getJSONObject(i);
             String subID = sub.getString("SID");
             String subName = sub.getString("Subject_name");
-            for (int j =0;j< platform.length();j++){
-                JSONObject plat = platform.getJSONObject(i);
+            String platformIDOUT = sub.getString("PID");
+            for (int j =0;j < platform.length();j++){
+                JSONObject plat = platform.getJSONObject(j);
+                String platformIDIN = plat.getString("PID");
                 String platName = plat.getString("Platform_name");
-                Double platscore = plat.getDouble("score");
-                subNsc.put("SID",subID);
-                subNsc.put("Subject_name",subName);
-                subNsc.put("Platform_name",platName);
-                subNsc.put("score",platscore);
-                Nsort.put("\n\n"+subNsc);
+                String platscore = plat.getString("score");
+                if (platformIDOUT.equals(platformIDIN)){
+                    subNsc.put("SID",subID);
+                    subNsc.put("Subject_name",subName);
+                    subNsc.put("Platform_name",platName);
+                    subNsc.put("score",platscore);
+//                    Nsort.join();
+                    stringBuilder = stringBuilder.append(subNsc).append("\n\n");
+                }
             }
+
         }
-        Arrays.sort(new JSONArray[]{Nsort});
-        return Arrays.toString(new JSONArray[]{Nsort});
+
+        return stringBuilder.toString();
     }
 }
