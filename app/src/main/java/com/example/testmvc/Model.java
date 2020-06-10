@@ -102,22 +102,20 @@ public class Model {
             JSONObject sub = subjects.getJSONObject(i);
             String subID = sub.getString("SID");
             String subName = sub.getString("Subject_name");
-            String platformIDOUT = sub.getString("PID");
+            String platformIDSUB = sub.getString("PID");
             for (int j =0;j < platform.length();j++){
                 JSONObject plat = platform.getJSONObject(j);
-                String platformIDIN = plat.getString("PID");
+                String platformIDPT = plat.getString("PID");
                 String platName = plat.getString("Platform_name");
                 String platscore = plat.getString("score");
-                if (platformIDOUT.equals(platformIDIN)){
+                if (platformIDSUB.equals(platformIDPT)){
                     subNsc.put("SID",subID);
                     subNsc.put("Subject_name",subName);
                     subNsc.put("Platform_name",platName);
                     subNsc.put("score",platscore);
-//                    Nsort.join();
-                    stringBuilder = stringBuilder.append(subNsc).append("\n\n");
                 }
             }
-
+            stringBuilder = stringBuilder.append(subNsc).append("\n\n");
         }
 
         return stringBuilder.toString();

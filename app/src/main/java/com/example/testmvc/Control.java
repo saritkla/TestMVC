@@ -19,6 +19,7 @@ public class Control {
         model = new Model();
         consult();
     }
+
     private void consult(){
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
